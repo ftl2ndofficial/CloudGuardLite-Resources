@@ -1,8 +1,8 @@
 [
   {
-    "version":"2.1.2",
-    "update_info":"Testing hihi",
+    "version":"2.1",
+    "update_info":"Added Discord2FA\nAdded Anti anti-kick\nAdded anti MiniMessage exploit",
     "important":"true",
-    "emergency":"true"
+    "emergency":"false"
   }
 ]
