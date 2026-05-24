@@ -1,0 +1,21 @@
+name: CloudGuardLite
+version: '2.1'
+main: me.ftl2nd.cloudGuardLite.CloudGuardLite
+api-version: '1.20'
+prefix: CloudGuardLite
+authors: [FTL 2nd]
+description: Security plugin for Minecraft servers
+website: https://ftl2nd.com
+folia-supported: true
+depend:
+  - packetevents
+libraries:
+  - com.discord4j:discord4j-core:3.3.1
+commands:
+  cloudguardlite:
+    aliases: [cgl]
+permissions:
+  cloudguardlite.reload:
+    default: false
+  cloudguardlite.commandsblocker.bypass:
+    default: op

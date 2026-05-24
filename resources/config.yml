@@ -1,0 +1,24 @@
+# CloudGuardLite v2.1
+
+# Danh sách những người chơi được phép sở hữu quyền OP
+# Mỗi người chơi là một dòng, nhớ viết đúng theo mẫu hoặc sẽ bị lỗi
+ops:
+  - "FTL2nd"
+#  - "AnotherPlayer"
+
+# Nếu bật, chỉ cho phép người chơi nằm trong danh sách ở trên reload plugin
+# Nếu tắt, bất kỳ ai với quyền "cloudguardlite.reload" đều có thể reload plugin
+restrict_reload: true
+
+# Tự động kiểm tra update?
+auto_update:
+  enabled: true
+  check_interval: 60 # Phút
+  # Thông báo cho người chơi trong danh sách OP?
+  notify_ops: true
+
+# Đừng bật nếu không biết mình đang làm gì
+debug: false
+
+# Tuyệt đối không động vào hoặc config sẽ bị reset
+config_version: 1

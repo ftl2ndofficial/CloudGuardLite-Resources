@@ -1,0 +1,13 @@
+# Setting cho module Anti Fake Proxy
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+# Chỉ hoạt động khi server đang sử dụng BungeeCord hoặc Velocity
+enabled: false
+
+# List IPv4 của proxy được phép kết nối đến server này
+whitelist_ips:
+  - "127.0.0.1"
+  - "localhost"
+
+# Log lại nỗ lực kết nối từ proxy không nằm trong whitelist lên console?
+logging: true

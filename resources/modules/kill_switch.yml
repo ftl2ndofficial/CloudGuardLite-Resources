@@ -1,0 +1,23 @@
+# Setting cho module Kill Switch
+
+# Module này sẽ giới hạn người chơi có thể sử dụng các lệnh /stop, /restart
+# và chặn hoàn toàn lệnh /reload. Chỉ những người chơi nằm trong danh sách OP
+# mới có thể sử dụng các lệnh trên.
+
+# Công tắc tổng
+enabled: true
+
+# Tin nhắn thông báo
+messages:
+  no_permission: "<red>Bạn không có quyền sử dụng lệnh này!</red>"
+  no_reload: "<red>Bạn không thể sử dụng lệnh reload trên server này!</red>"
+  no_reload_console: "<red>Bạn không thể sử dụng lệnh reload từ console!</red>"
+
+# Banner hiển thị khi plugin bị tắt trái phép
+banner:
+  - ""
+  - "<red><bold>=================================================</bold></red>"
+  - "<red><bold>[CLOUDGUARDLITE] PLUGIN BỊ VÔ HIỆU HÓA TRÁI PHÉP!</bold></red>"
+  - "<red><bold>[CLOUDGUARDLITE] Đang tiến hành tắt server...</bold></red>"
+  - "<red><bold>=================================================</bold></red>"
+  - ""

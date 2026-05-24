@@ -1,0 +1,7 @@
+# Setting cho module Anti Anti-Kick
+
+# Công tắc tổng
+enabled: true
+
+# Lý do dự phòng nếu không lấy được lý do kick gốc
+fallback_reason: "<red>[CGL] Bạn đã bị buộc ngắt kết nối</red>"

@@ -1,0 +1,10 @@
+# Setting cho module Anti Ethanol
+
+# Ethanol là một mod có thể tương tác với server Minecraft có chứa backdoor Ethanol
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+enabled: true
+
+# Lệnh được thực thi khi phát hiện player sử dụng mod Ethanol
+punishment_commands:
+  - "kick %player% Mod Ethanol không được phép sử dụng trên server này!"

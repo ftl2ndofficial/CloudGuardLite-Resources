@@ -1,0 +1,43 @@
+# Setting cho module Domain Whitelist
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+enabled: false
+
+# Danh sách các domain được phép kết nối đến server
+# Mỗi domain là một dòng, nhớ viết đúng theo mẫu hoặc sẽ bị lỗi
+domain_whitelist:
+  - "127.0.0.1"
+#  - "xvideos.com"
+
+# Tin nhắn kick giả khi player cố gắng kết nối bằng một domain không được whitelist
+fake_kick_message: "Connection refused: getsockopt"
+
+# Chỉnh sửa MOTD của server theo domain
+# MOTD chỉ chứa tối đa 2 dòng, nếu vượt quá sẽ bị lỗi
+motd:
+  whitelisted:
+    - "<green>Chào mừng!</green>"
+    - "<yellow>Server này đang được bảo vệ bởi CloudGuardLite</yellow>"
+  non_whitelisted:
+    - "<red>Server không xác định!</red>"
+
+# Chỉnh sửa tin nhắn khi di chuột vào cột ping
+server_version:
+  whitelisted: "CGLPaper 2.0"
+  non_whitelisted: "" # Để trống nếu không muốn sửa, sẽ hiển thị giá trị gốc
+
+# Phiên bản của server, nó sẽ hiển thị với player xem phiên bản của player có tương thích với server không
+protocol_version:
+  whitelisted: 767
+  non_whitelisted: -1 # Offline
+
+# Icon của server, thay đổi tại thư mục domain_whitelist_data
+# Hỗ trợ cả 2 định dạng .png và .ico, nhưng nên dùng .png để tránh lỗi
+icon:
+  whitelisted: "favico.png"
+  non_whitelisted: "default.png" # Để none nếu không muốn hiển thị icon
+
+# Số player online hiển thị trên server list
+online_players:
+  whitelisted: "real" # Để real nếu muốn hiện số player gốc, hoặc "100/0" nếu muốn hiện số player ảo
+  non_whitelisted: "0/0" # Số player hiện khi kết nối bằng hostname không được whitelist

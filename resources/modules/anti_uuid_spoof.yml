@@ -1,0 +1,12 @@
+# Setting cho module Anti UUID Spoof
+
+# Công tắc tổng
+# Tắt cái này nếu server đang sử dụng plugin có khả năng thay đổi UUID của player như AuthMe Premium, nLogin Premium, JPremium, ...
+enabled: true
+
+# Hỗ trợ Bedrock?
+# Bật cái này nếu server của bạn có hỗ trợ cả Bedrock và Java, nó sẽ bỏ qua kiểm tra UUID của người chơi Bedrock
+bedrock_supported: true
+
+# Lý do kick
+kick_reason: "UUID của bạn khác với UUID dự kiến. Liên hệ với quản trị viên nếu bạn nghĩ đây là một lỗi."

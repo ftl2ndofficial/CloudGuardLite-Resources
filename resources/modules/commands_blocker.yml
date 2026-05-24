@@ -1,0 +1,32 @@
+# Setting cho module Commands Blocker
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+enabled: false
+
+# Chặn việc bị các client như Meteor, ... soi plugin bằng cách đọc tên plugin trước dấu : hoặc lệnh /ver, /version, /about
+anti_plugin_probing: true
+
+# Những người chơi có quyền "cloudguardlite.commandsblocker.bypass" có thể bypass?
+bypass_permission: true
+
+# Chế độ chặn lệnh
+# Có 3 chế độ là WHITELIST, BLACKLIST và HIDE
+# WHITELIST: Chỉ những lệnh nằm trong danh sách mới được phép sử dụng, còn lại sẽ bị chặn
+# BLACKLIST: Những lệnh nằm trong danh sách sẽ bị chặn, còn lại sẽ được phép sử dụng
+# HIDE: Những lệnh nằm trong danh sách sẽ không được gợi ý, nhưng vẫn có thể sử dụng
+mode: "BLACKLIST"
+
+# Danh sách lệnh bị ảnh hưởng bởi chế độ chặn lệnh ở trên
+# Mỗi lệnh là một dòng, nhớ viết đúng theo mẫu hoặc sẽ bị lỗi
+blocked_commands:
+  - "/op"
+  - "/ver"
+  - "/version"
+  - "/about"
+  - "/plugins"
+  - "/pl"
+
+# Tin nhắn gửi cho người chơi khi họ cố gắng sử dụng một lệnh bị chặn
+message:
+  action_bar: true
+  text: "<red>Lệnh này đã bị chặn bởi CloudGuardLite!</red>"

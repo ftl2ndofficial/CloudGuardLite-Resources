@@ -1,0 +1,13 @@
+# Setting cho module Logout Actions
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+enabled: true
+
+# Dùng để chống lại việc log acc bằng cách thực thi 1 số hành động khi người chơi nằm trong danh sách thoát khỏi server!
+commands:
+  - "[deop]" # Phương pháp thay thế để sử dụng deop của Bukkit giúp tiết kiệm tài nguyên
+  - "lp user %player% permission clear"
+  - "lp user %player% parent set default"
+
+# Bật cái này nếu muốn cho toàn bộ command chạy cùng 1 lúc, hoặc tắt đi nếu muốn mỗi command chạy 1 tick
+simultaneous_commands: false

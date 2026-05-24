@@ -1,0 +1,10 @@
+
+prefix: "<b><gradient:#5088FF:#8DD7FF>ᴄʟᴏᴜᴅɢᴜ</gradient><gradient:#8DD7FF:#8DD7FF>ᴀʀᴅʟɪᴛᴇ</gradient></b> <gray>»</gray> "
+
+no_permission: "<red>Bạn không có quyền để thực hiện hành động này!</red>"
+
+gamemode_change_blocked: "<red>Có ai đó đã cố chuyển bạn sang chế độ sáng tạo, nhưng bạn không đưược phép!</red>"
+
+force_gamemode_resetted: "<yellow>Gamemode của bạn đã bị reset!</yellow>"
+
+reloaded_successfully: "<green>Plugin đã được reload thành công!</green>"

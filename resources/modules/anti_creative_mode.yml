@@ -1,0 +1,12 @@
+# Setting cho module Anti Creative Mode
+
+# Công tắc tổng
+# Bật lên nếu muốn chặn người chơi nằm ngoài danh sách OP sở hữu chế độ sáng tạo
+enabled: true
+
+# Kiểm tra khi player tham gia server?
+# Nếu họ không nằm trong danh sách và sở hữu chế độ sáng tạo, họ sẽ bị đặt lại về gamemode được chỉ định
+check_on_join: true
+
+# Gamemode sẽ được đặt lại nếu người chơi nằm ngoài danh sách OP và sở hữu chế độ sáng tạo
+force_gamemode: "SURVIVAL"

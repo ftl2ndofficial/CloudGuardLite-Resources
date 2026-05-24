@@ -1,0 +1,74 @@
+# Setting cho module Discord 2FA
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+enabled: false # Chỉ bật nếu server của bạn là server đơn, hoặc đây là cụm lobby trong toàn bộ network nếu không sẽ rất phiền phức
+
+# Discord bot token
+# Bạn có trách nhiệm bảo vệ token của bot, chúng tôi sẽ không chịu trách nhiệm nếu token bị lộ!
+token: "YOUR_DISCORD_BOT_TOKEN"
+
+# ID của server Discord mà bot sẽ hoạt động
+guild_id: "YOUR_DISCORD_GUILD_ID"
+
+# Yêu cầu 2FA tồn tại trong bao lâu?
+2fa_duration: 300 # Giây
+
+# Sau bao lâu thì sẽ phải xác thực 2FA lại? (Đơn vị: Phút - 60 phút = 1 giờ - 1440 phút = 1 ngày)
+# Đặt là 0 để chỉ xác thực lại khi đổi IP
+# Mặc định luôn yêu cầu xác thực lại khi đổi IP
+reverify_interval: 0
+
+# Cho phép player có tên trong danh sách OP nhưng chưa liên kết ID Discord tham gia server?
+allow_discord_unlinked_join: false 
+
+# Tin nhắn từ chối tham gia khi player chưa xác thực 2FA
+deny_message: "Vui lòng xác thực 2FA!"
+
+# Tin nhắn khi player đang chờ xác thực 2FA
+verifying_message: "Bạn đang có yêu cầu 2FA chưa xử lý, vui lòng đợi"
+
+# Tuỳ chỉnh tin nhắn Discord 2FA gửi qua DM
+# Placeholder: %player% - Tên player, %ip% - IP đăng nhập, %duration% - Thời gian hết hạn (giây)
+discord_messages:
+  # Tin nhắn yêu cầu xác thực (embed)
+  request:
+    title: "Yêu cầu xác thực 2FA"
+    description: "Có ai đó đang cố đăng nhập vào server Minecraft với tài khoản **%player%** từ IP ||%ip%||.\n\nNếu đây là bạn, hãy nhấn nút **\"Có, là tôi\"**.\nNếu không, nhấn **\"Không phải tôi\"** để chặn IP này.\n\n⏳ Yêu cầu này sẽ hết hạn sau **%duration% giây**."
+    approve_button: "Có, là tôi"
+    deny_button: "Không phải tôi"
+
+  # Tin nhắn xác thực thành công
+  approved:
+    title: "Xác thực thành công"
+    description: "Bạn đã xác nhận đăng nhập cho tài khoản **%player%** từ IP ||%ip%||."
+
+  # Tin nhắn từ chối đăng nhập
+  denied:
+    title: "Từ chối đăng nhập"
+    description: "Bạn đã từ chối đăng nhập cho tài khoản **%player%**.\nIP ||%ip%|| đã bị xử phạt."
+
+  # Tin nhắn khi yêu cầu hết hạn
+  expired:
+    title: "Yêu cầu đã hết hạn"
+    description: "Yêu cầu xác thực 2FA cho tài khoản **%player%** từ IP ||%ip%|| đã hết hạn."
+
+# Xử lý nếu có quá nhiều yêu cầu 2FA đến từ cùng 1 IP chưa xử lý trong 1 khoảng thời gian
+# Tránh việc kẻ xâm nhập làm phiền bằng cách spam yêu cầu 2FA
+anti_2fa_spam:
+  enabled: true # Bật
+  max_requests: 3 # Số request tối đa liên tiếp từ IP đó
+  remember_duration: 3600 # Giây, sau khoảng thời gian này thì sẽ reset lại số request
+  # Nếu bật, khi IP bị spam sẽ tự động bị ignore cho đến hết "remember_duration"
+  ignore_request:
+    enabled: true
+    ignore_time: 180 # Giây
+
+# Hành động nếu nhấn nút "Từ chối" ở thông báo Discord?
+deny_actions:
+  action: IGNORE # IGNORE/COMMAND
+  ignore_time: 180 # Giây
+  commands:
+    - "tempbanip %ip% 3d Xâm nhập trái phép"
+
+
+

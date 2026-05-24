@@ -1,0 +1,43 @@
+# Setting cho module OP Checker
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+enabled: true
+
+# Mode kiểm tra
+# Có 2 mode là TASK và ON_COMMAND
+# Với mode TASK, plugin sẽ kiểm tra trạng thái OP/Quyền nhạy cảm của người chơi theo khoảng thời gian đã định ở dưới
+# Với mode ON_COMMAND, plugin sẽ kiểm tra trạng thái OP/Quyền nhạy cảm của người chơi mỗi khi họ thực thi một lệnh nào đó
+mode: "TASK"
+
+# Có kiểm tra cả gamemode của người chơi không?
+# Nếu có, người chơi không nằm trong danh sách OP sẽ bị trừng phạt nếu họ sở hữu chế độ sáng tạo
+gamemode_check: true
+
+# Các quyền mà những người chơi nằm ngoài danh sách ở trên không được sở hữu (Quyền nhạy cảm)
+# Mỗi quyền là một dòng
+sensitive_permissions:
+  - "*"
+  - "essentials.*"
+  - "worldedit.*"
+  - "worldguard.*"
+  - "luckperms.*"
+
+# Lệnh thực thi nếu người chơi nằm ngoài danh sách sở hữu quyền OP hoặc quyền nhạy cảm
+# %player% sẽ được thay thế bằng tên người chơi vi phạm
+punish_commands:
+  - "deop %player%"
+  - "lp user %player% permission clear"
+  - "ban %player% Khai thác OP"
+
+# Bật cái này nếu muốn cho toàn bộ command chạy cùng 1 lúc, hoặc tắt đi nếu muốn mỗi command chạy 1 tick
+simultaneous_commands: true
+
+# Tiết kiệm tài nguyên bằng cách ngừng hoàn toàn task kiểm tra khi server không có player online?
+do_not_check_if_no_players_online: true
+
+# Bao nhiêu lâu thì plugin sẽ kiểm tra trạng thái OP/Quyền nhạy cảm của người chơi 1 lần?
+check_interval: 150 # Đơn vị: Miliseconds (ms)
+
+# Nếu người chơi nằm ngoài danh sách sở hữu quyền OP hoặc quyền nhạy cảm quá bao lâu thì sẽ bị trừng phạt?
+# Đặt số này quá thấp sẽ khiến người chơi bị trừng phạt nhầm
+hold_time: 200 # Đơn vị: Miliseconds (ms)

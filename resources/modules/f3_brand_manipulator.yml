@@ -1,0 +1,8 @@
+# Setting cho module F3 Brand Manipulator
+
+# Công tắc tổng, tắt cái này thì toàn bộ phần bên dưới sẽ không hoạt động
+enabled: true
+
+# Thay đổi "F3 brand" của server
+# Sử dụng MiniMessage để định dạng văn bản
+f3_brand: "Protected by CloudGuardLite"
