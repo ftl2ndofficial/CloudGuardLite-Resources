@@ -5,3 +5,4 @@ OPGuard
 OPProtection
 NarGuard
 mc-IPGuard
+PlugManX
